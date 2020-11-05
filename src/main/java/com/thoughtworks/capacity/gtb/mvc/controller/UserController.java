@@ -1,6 +1,7 @@
 package com.thoughtworks.capacity.gtb.mvc.controller;
 
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,5 +13,12 @@ public class UserController {
     @ResponseBody
     public String Login() {
         return "login";
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    @ResponseBody
+    @ResponseStatus(HttpStatus.CREATED)
+    public void Register(@RequestBody String user) {
+
     }
 }
