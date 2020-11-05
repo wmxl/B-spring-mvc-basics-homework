@@ -14,7 +14,7 @@ public class User {
     private Integer id;
     @NotNull(message = "name must not be null")
     private String username;
-    @NotBlank(message = "type must not be blank")
+    @NotNull(message = "name must not be null")
     private String password;
     private String email;
 }
